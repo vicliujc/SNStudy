@@ -34,7 +34,7 @@ public class App
 //    	App a=new App();
 //		a.setName("家琛");
 //		a.sayHello();
-    	
+   	
     	ApplicationContext ac=new ClassPathXmlApplicationContext("applicationContext.xml");
     	App a=(App)ac.getBean("hello");
     	Bye b=(Bye)ac.getBean("bye");    	
