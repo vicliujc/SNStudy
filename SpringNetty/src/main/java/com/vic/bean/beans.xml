@@ -7,12 +7,33 @@
    </bean>
    <bean name="department" class="com.vic.bean.CollectionBean">
    <property name="name" value="财务部"></property>
-   <property name=empName">
+   <property name="empName">
         <list>
         <value>小明</value>
         <value>小刘</value>
         <value>小张</value>
         </list>
    </property>
+   <property name="empList" >
+        <list>
+        <ref bean="listBean"></ref>
+        <ref bean="listBean1"></ref>
+        </list>
+   </property>
+   <property name="empMap">
+        <map>
+          <entry key="1" value-ref="listBean"></entry>
+          <entry key="2" value-ref="listBean1"></entry>
+        </map>
+   </property>
+   </bean>
+   <bean name="listBean" class="com.vic.bean.ListBean">
+   <property name="name" value="小明"></property>
+   <property name="id" value="1"></property>
+   </bean>
+   <!--  -->
+   <bean name="listBean1" class="com.vic.bean.ListBean">
+   <property name="name" value="大明"></property>
+   <property name="id" value="2"></property>
    </bean>
 </beans>
