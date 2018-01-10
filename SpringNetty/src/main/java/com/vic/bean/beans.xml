@@ -5,4 +5,14 @@
    <bean name="student" class="com.vic.bean.Student"  scope="singleton">
    <property name="name" value="ABBY"></property>
    </bean>
+   <bean name="department" class="com.vic.bean.CollectionBean">
+   <property name="name" value="财务部"></property>
+   <property name=empName">
+        <list>
+        <value>小明</value>
+        <value>小刘</value>
+        <value>小张</value>
+        </list>
+   </property>
+   </bean>
 </beans>
