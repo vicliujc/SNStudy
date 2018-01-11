@@ -35,5 +35,8 @@ public class App1 {
 		for(Entry<String ,ListBean> entry1:de.getEmpMap().entrySet()) {
 			System.out.println(entry1.getKey()+":"+entry1.getValue());
 		}
+		
+		Employee e=(Employee) ac.getBean("employee");
+		System.out.println(e.getName()+":"+e.getAge());
 	}
 }

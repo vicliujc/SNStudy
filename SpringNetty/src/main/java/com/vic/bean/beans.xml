@@ -36,4 +36,10 @@
    <property name="name" value="大明"></property>
    <property name="id" value="2"></property>
    </bean>
+   
+   <bean id="employee" class="com.vic.bean.Employee">
+        <!-- 通过构造函数注入属性值 -->
+        <constructor-arg index="0" type="java.lang.String" value="小明"></constructor-arg>
+        <constructor-arg index="1" type="int" value="10"></constructor-arg>
+   </bean>
 </beans>

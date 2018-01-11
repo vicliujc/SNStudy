@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 配置被代理的对象 -->
+   <bean id="test1Service" class="com.vic.aopLearn.Test1Service">
+   <property name="name" value="xiao"></property>
+   </bean>
+   <!-- 配置前置通知 -->
+   <bean id="MyMethodBeforeAdvice" class="com.vic.aopLearn.MyMethodBeforeAdvice"></bean>
+   <!-- 配置代理对象 -->
+   <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+     <!-- 代理接口集 -->
+     <property name="proxyInterfaces">
+         <list>
+           <value>com.vic.aopLearn.TestServiceInterface</value>
+         </list>
+     </property>
+     <!-- 把通知织入到代理对象 -->
+     <property name="interceptorNames">
+     <!-- 相当于把前置通知和代理对象关联，吧通知看做拦截器 -->
+     <value>MyMethodBeforeAdvice</value>
+     </property>
+     <!-- 配置被代理对象 -->
+      <property name="target" ref="test1Service">
+      
+      </property>
+     </bean>
+</beans>
