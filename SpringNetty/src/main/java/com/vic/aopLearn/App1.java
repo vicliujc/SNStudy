@@ -14,7 +14,8 @@ public class App1 {
 	    //代理
 	    TestServiceInterface t2=(TestServiceInterface) ac.getBean("proxyFactoryBean");
 	    t2.sayHello();
-
+        TestServer2 t3=(TestServer2) ac.getBean("proxyFactoryBean2");
+        t3.meet();
 	}
 
 }

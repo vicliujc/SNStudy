@@ -29,6 +29,27 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
       <property name="target" ref="test1Service">
       </property>
      </bean>
-     
-     
+   
+   <bean id="test2" class="com.vic.aopLearn.Test2Service">
+   <property name="name" value="小明"></property>
+   </bean>
+   <bean id="myMethod" class="com.vic.aopLearn.MyMethod"></bean>
+   <bean id="testService2" class="com.vic.aopLearn.Test2Service">
+   </bean>
+   <bean id="proxyFactoryBean2" class="org.springframework.aop.framework.ProxyFactoryBean">
+   <property name="proxyInterfaces">
+            <list>
+            <value>com.vic.aopLearn.TestServer2</value>
+            </list>
+   </property>
+   <property name="interceptorNames">
+      <value>myMethod</value>
+   </property>
+   <property name="target">
+   </property>
+   
+   <!--    <ref bean="test2" bean="test1Service"></ref>-->
+   
+   
+   </bean>
 </beans>
