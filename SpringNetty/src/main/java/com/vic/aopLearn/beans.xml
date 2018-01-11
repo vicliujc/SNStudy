@@ -27,7 +27,8 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
      </property>
      <!-- 配置被代理对象 -->
       <property name="target" ref="test1Service">
-      
       </property>
      </bean>
+     
+     
 </beans>
