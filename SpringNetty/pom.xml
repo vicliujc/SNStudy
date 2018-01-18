@@ -33,5 +33,17 @@
     <artifactId>netty-all</artifactId>
     <version>4.1.19.Final</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjrt</artifactId>
+    <version>1.8.13</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis</artifactId>
+    <version>3.4.5</version>
+</dependency>
   </dependencies>
 </project>
